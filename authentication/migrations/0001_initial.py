@@ -40,3 +40,635 @@ class Migration(migrations.Migration):
             },
         ),
     ]
+
+
+
+
+
+
+
+# <!-- 05/02/2024 -->
+
+
+# <!DOCTYPE html>
+# <html lang="en">
+
+# <head>
+#   <meta charset="UTF-8">
+#   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#   <style>
+#     #section1Heading {
+#       text-align: left;
+#       /* Center the heading */
+#       margin-top: 50px;
+#       /* Adjust the top margin as needed */
+#       margin-bottom: 1px;
+#       /* Adjust the bottom margin as needed */
+#     }
+
+#     #section2Heading {
+#       text-align: left;
+#       /* Center the heading */
+#       margin-top: 20px;
+#       /* Adjust the top margin as needed */
+#       margin-bottom: 1px;
+#       /* Adjust the bottom margin as needed */
+#     }
+
+#     #section3Heading {
+#       text-align: left;
+#       /* Center the heading */
+#       margin-top: 20px;
+#       /* Adjust the top margin as needed */
+#       margin-bottom: 1px;
+#       /* Adjust the bottom margin as needed */
+#     }
+
+#     #section4Heading {
+#       text-align: left;
+#       /* Center the heading */
+#       margin-top: 20px;
+#       /* Adjust the top margin as needed */
+#       margin-bottom: 1px;
+#       /* Adjust the bottom margin as needed */
+#     }
+
+#     table {
+#       border-collapse: collapse;
+#       width: 80%;
+#       margin: 7px 0px;
+#     }
+
+#     td {
+#       border: 1px solid #ddd;
+#       padding: 5px;
+#       text-align: left;
+#     }
+
+#     th {
+#       padding: 5px;
+#       border: 1px solid #ddd;
+#       background-color: #f2f2f2;
+#     }
+
+#     /* Decrease padding for Sr. No and Age columns in familyTable */
+#     #familyTable th:first-child,
+#     #familyTable td:first-child,
+#     #familyTable td:nth-child(4) {
+#       padding: 8px 4px;
+#     }
+
+#     /* Decrease size of input fields for Sr. No and Age columns in familyTable */
+#     #familyTable td:first-child input,
+#     #familyTable td:nth-child(4) input {
+#       width: 40px;
+#       /* Adjust the width as needed */
+#     }
+
+#     #vehicleTable th {
+#       padding: -300px;
+#       /* Adjust the padding as needed */
+#     }
+
+#     #petTable {
+#       margin-left: -1px;
+#       /* Adjust the margin-left as needed */
+#     }
+
+#     #vehicleTable td {
+#       border: 1px solid #ddd;
+#       padding: 5px;
+#       text-align: left;
+#     }
+
+#     /* Increase padding for Registration No. column in vehicleTable */
+#     #vehicleTable td:nth-child(4) {
+#       padding: 5px;
+#       /* Adjust the padding as needed */
+#     }
+
+#     /* Decrease size of input fields for Sr. No and Age columns in vehicleTable */
+#     #vehicleTable td:first-child input,
+#     #vehicleTable td:nth-child(4) input {
+#       width: 60px;
+#       /* Adjust the width as needed */
+#     }
+
+
+#     button {
+#       cursor: pointer;
+#       margin-bottom: 0px;
+#     }
+
+#     body {
+#       display: flex;
+#       flex-direction: column;
+#       /* align-items: center;
+#       justify-content: center; */
+#       height: 150vh;
+#       width: 73vw;
+#       margin: 0 20vw;
+#     }
+
+#     form {
+#       /* overflow: auto; */
+#       /* border: 2px solid blue; */
+
+#       text-align: center;
+#       max-width: 73vw;
+#       /*pehle 50vw tha */
+#     }
+
+#     h1 {
+#       font-size: 2em;
+#       /* border: 2px solid blue; */
+#       display: block;
+#       margin-top: 20px;
+#       /* margin-left: 10px; */
+#       margin-left: 150px;
+#       /* text-align: center; */
+#       /* padding-left: 2em; */
+#     }
+
+#     h2 {
+#       /* border: 2px solid blue; */
+#       display: block;
+#       font-size: 1.5em;
+#       margin-top: -20px;
+#       margin-bottom: 30px;
+#       /* margin-left: 10px; */
+#       margin-left: 230px;
+#       /* text-align: center; */
+#       /* padding-left: 2em; */
+#     }
+
+#     #RI {
+#       /* border: 2px solid blue; */
+
+#       display: flex;
+#       width: 530px;
+#       justify-content: center;
+#       padding-top: 38px;
+#       margin-top: 25px;
+#       margin-bottom: -13px;
+#       margin-left: -100px;
+#       align-items: center;
+#       flex-direction: column;
+#       /* padding-left: 1px; */
+#       /* border: 2px solid black; */
+#     }
+
+#     h3 {
+#       text-align: left;
+#       margin-bottom: 20px;
+#       margin-top: 20px;
+
+#     }
+
+#     label {
+#       /* border: 1px solid #df2222; */
+#       display: block;
+#       margin-bottom: -0px;
+#       margin-left: 130px;
+#     }
+
+#     input {
+
+#       margin-bottom: 2px;
+#       padding: 5px 0px;
+#       border: 1px solid #ccc;
+#       /* max-width: auto; */
+
+#       /* Default border color */
+#     }
+
+#     .custom-input {
+#       margin-right: 60px;
+#     }
+
+#     input.error {
+#       border-color: red;
+#       /* Red border color for errors */
+#     }
+
+#     .warning {
+#       /* border: 2px solid green; */
+#       color: red;
+#       font-size: 12px;
+#       text-align: center;
+#       margin-top: 1px;
+#       margin-bottom: 12px;
+#       margin-left: 170px;
+#     }
+
+#     .input-container {
+#       display: flex;
+#       justify-content: space-between;
+#       align-items: center;
+#       width: 500px;
+#     }
+#   </style>
+
+
+
+#   <script>
+#     function addRow(tableId) {
+#       var table = document.getElementById(tableId);
+#       var newRow = table.insertRow(table.rows.length);
+#       var cellCount = table.rows[0].cells.length;
+
+#       for (var i = 0; i < cellCount; i++) {
+#         var cell = newRow.insertCell(i);
+#         var input = document.createElement("input"); // Create a new input element for each cell(abhi add kiya hai)
+
+
+#         if (i === 0) {
+#           // Sr. No column
+#           cell.innerHTML = table.rows.length - 1; // Start from 2 after the initial row
+#         } else if (i === cellCount - 1) {
+#           // Action column
+#           var removeButton = document.createElement("button");
+#           removeButton.innerText = "-";
+#           removeButton.type = "button";
+#           removeButton.onclick = function () {
+#             removeRow(tableId, newRow.rowIndex);
+#           };
+#           cell.appendChild(removeButton);
+#         }
+
+
+#         // for contact in family table
+#         else if (tableId === "familyTable" && i === 5) { // Check if it's the table containing age and contact number
+#           input.type = "text";
+#           input.maxLength = "10";
+#           input.onkeypress = function (event) {
+#             return event.charCode >= 48 && event.charCode <= 57;
+#           };
+
+#           input.required = true;
+#           cell.appendChild(input);
+#         }
+
+#         // for age in family table
+#         else if (tableId === "familyTable" && i === 3) { // Check if it's the table containing age and contact number
+#           input.type = "text";
+#           input.maxLength = "3";
+#           input.onkeypress = function (event) {
+#             return event.charCode >= 48 && event.charCode <= 57;
+#           };
+
+#           input.required = true;
+#           cell.appendChild(input);
+#         }
+
+#         else if (tableId === "servantQuartersTable" && i === 4) { // Check if it's the table containing age and contact number
+#           input.type = "text";
+#           input.maxLength = "10";
+#           input.onkeypress = function (event) {
+#             return event.charCode >= 48 && event.charCode <= 57;
+#           };
+
+#           input.required = true;
+#           cell.appendChild(input);
+#         }
+
+
+
+
+#         else {
+#           // Check if the first row has "Yes/No" in the corresponding columns
+#           var isYesNoColumn = (i === cellCount - 4 || i === cellCount - 3 || i === cellCount - 2 || i === cellCount - 1);
+#           if (isYesNoColumn && table.rows[1].cells[i].querySelector('select')) {
+#             // If the first row has "Yes/No," add a dropdown in the new row
+#             var select = document.createElement("select");
+#             select.innerHTML = "<option value='yes'>Yes</option><option value='no'>No</option>";
+#             cell.appendChild(select);
+#           } else {
+#             // Default to text input for other columns
+#             cell.innerHTML = "<input type='text'>";
+
+#           }
+#         }
+#       }
+#     }
+
+
+
+
+#     // yaha closing script tag tha
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#     function storeData() {
+#       var houseNoInput = document.getElementById('houseNo');
+#       var allotteeNameInput = document.getElementById('allotteeName');
+#       var contactNoInput = document.getElementById('contactNo');
+#       var IdNoInput = document.getElementById('IdNumber'); //ye ab add kara hai
+
+
+#       var houseNo = houseNoInput.value;
+#       var allotteeName = allotteeNameInput.value;
+#       var contactNo = contactNoInput.value;
+#       var IdNo = IdNoInput.value; //ye ab add kara hai
+
+
+#       var houseNoRegex = /^(?=.*[0-9])(?=.*[a-zA-Z])[\w\d]+$/;
+#       var allotteeNameRegex = /^[a-zA-Z.]+$/;
+#       // var contactNoRegex = /^\d+$/;
+
+#       if (!houseNo.match(houseNoRegex)) {
+#         houseNoInput.classList.add('error');
+#         document.getElementById('houseNoWarning').innerText = 'The house number must include both numbers and letters, excluding -, /, #';
+#       } else {
+#         houseNoInput.classList.remove('error');
+#         document.getElementById('houseNoWarning').innerText = '';
+#       }
+
+#       if (!allotteeName.match(allotteeNameRegex)) {
+#         allotteeNameInput.classList.add('error');
+#         document.getElementById('allotteeNameWarning').innerText = 'Allottee Name can only contain letters and a period (full stop).';
+#       } else {
+#         allotteeNameInput.classList.remove('error');
+#         document.getElementById('allotteeNameWarning').innerText = '';
+#       }
+
+#       if (!contactNo.match(contactNoRegex)) {
+#         contactNoInput.classList.add('error');
+#         document.getElementById('contactNoWarning').innerText = 'Contact No. can only contain digits.';
+#       } else {
+#         contactNoInput.classList.remove('error');
+#         document.getElementById('contactNoWarning').innerText = '';
+#       }
+
+#       // Only store data if all fields pass validation
+#       if (houseNo.match(houseNoRegex) && allotteeName.match(allotteeNameRegex) && contactNo.match(contactNoRegex)) {
+#         var userData = {
+#           'House No.': houseNo,
+#           'Allottee Name': allotteeName,
+#           'Contact No.': contactNo,
+#           'ID no.': IdNo
+#         };
+
+#         localStorage.setItem('userData', JSON.stringify(userData));
+#         alert('Data stored successfully!');
+#       }
+#     }
+
+#     // function addRow(tableId) {
+#     //   var table = document.getElementById(tableId);
+#     //   var newRow = table.insertRow(table.rows.length);
+#     //   var cellCount = table.rows[0].cells.length;
+
+#     // for (var i = 0; i < cellCount; i++) {
+#     //   var cell = newRow.insertCell(i);
+
+#     //   if (i === 0) {
+#     //     // Sr. No column
+#     //     cell.innerHTML = table.rows.length - 1; // Start from 2 after the initial row
+#     //   } else {
+#     //     // Check if the first row has "Yes/No" in the corresponding columns
+#     //     var isYesNoColumn = (i === cellCount - 3 || i === cellCount - 2 || i === cellCount - 1);
+#     //     var removeRow = (i === cellCount - 3 || i === cellCount - 2 || i === cellCount - 1);
+#     //     if (isYesNoColumn  && table.rows[1].cells[i].querySelector('select')) {
+#     //       // If the first row has "Yes/No," add a dropdown in the new row
+#     //       var select = document.createElement("select");
+#     //       select.innerHTML = "<option value='yes'>Yes</option><option value='no'>No</option>";
+#     //       cell.appendChild(select);
+#     //     } else {
+#     //       // Default to text input for other columns
+#     //       cell.innerHTML = "<input type='text'>";
+#     //       //  <td><button>remove row</button></td>
+
+#     //     }
+#     //   }
+#     // }
+#     // }
+
+
+
+#     // this one is the main
+#     function removeRow(tableId, rowIndex) {
+#       var table = document.getElementById(tableId);
+#       var rowCount = table.rows.length;
+
+#       if (rowCount > 2) {
+#         // Make sure there are at least two rows (header + one data row) before removing
+#         table.deleteRow(rowIndex);
+#         // Update Sr. No in the first column of the remaining rows
+#         for (var i = rowIndex; i < rowCount - 1; i++) {
+#           table.rows[i].cells[0].innerText = i; // Update Sr. No
+#         }
+#       } else {
+#         alert("Cannot remove the last row.");
+#       }
+#     }
+
+
+#   </script>
+
+
+
+
+
+
+
+# </head>
+
+# <body>
+#   <h1>CSIO RESIDENCE WELFARE ASSOCIATION</h1>
+#   <h2>Sector 30C Chandigarh (Residents Information)</h2>
+
+#   <form>
+#     <div id="RI">
+#       <div class="input-container">
+#         <label for="houseNo">House No :</label>
+#         <input type="text" id="houseNo" class="custom-input" placeholder="Enter House No." required>
+#       </div>
+#       <div id="houseNoWarning" class="warning"></div>
+
+#       <div class="input-container">
+#         <label for="allotteeName">Allottee Name :</label>
+#         <input type="text" id="allotteeName" class="custom-input" placeholder="Enter Allottee Name" required>
+#       </div>
+#       <div id="allotteeNameWarning" class="warning"></div>
+
+#       <div class="input-container">
+#         <label for="contactNo">Contact No :</label>
+#         <input type="text" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57" id="contactNo"
+#           class="custom-input" placeholder="Enter Contact No." required>
+#       </div>
+#       <div id="contactNoWarning" class="warning"></div>
+
+#       <div class="input-container">
+#         <label for="Id">ID Number :</label>
+#         <input type="text" id="IdNumber" class="custom-input" placeholder="Enter Your ID No." required>
+#       </div>
+#       <div id="IdNoWarning" class="warning"></div> <!--ye wala div maine add kiya hai-->
+
+#     </div>
+
+#     <h3 id="section1Heading">Details of Family Members</h3>
+#     <!-- Family table-->
+#     <table id="familyTable">
+#       <thead>
+#         <tr>
+#           <th>Sr. No</th>
+#           <th>Name</th>
+#           <th>Relation</th>
+#           <th>Age</th>
+#           <th>Occupation</th>
+#           <th>Mobile No</th>
+#           <th>action</th>
+
+#         </tr>
+#       </thead>
+#       <tbody>
+#         <!-- Initial row -->
+#         <tr>
+#           <td>1</td>
+#           <td><input type="text"></td>
+#           <td><input type="text"></td>
+#           <td><input type="text" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57"></td>
+#           <td><input type="text"></td>
+#           <td><input type="text" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57"></td>
+#           <td><button>-</button></td>
+
+
+#         </tr>
+#       </tbody>
+#     </table>
+
+#     <!-- Add buttons for adding and removing rows for the family table -->
+#     <button type="button" onclick="addRow('familyTable')">+</button>
+#     <!-- <button type="button" onclick="removeRow('familyTable')">-</button> -->
+#     <h3 id="section2Heading">Details of vehicles owned</h3>
+#     <!-- Vehicle table -->
+#     <table id="vehicleTable">
+#       <thead>
+#         <tr>
+#           <th>Sr. No</th>
+#           <th>Vehicle</th>
+#           <th>Make</th>
+#           <th>Registration No.</th>
+#           <th>Use (Personal/Commercial)</th>
+#           <th>Sticker Available ?</th>
+#           <th>action</th>
+
+#         </tr>
+#       </thead>
+#       <tbody>
+#         <!-- Example row -->
+#         <tr>
+#           <td>1</td>
+#           <td><input type="text"></td>
+#           <td><input type="text"></td>
+#           <td><input type="text"></td>
+#           <td><input type="text"></td>
+#           <td> <select>
+#               <option value="yes">Yes</option>
+#               <option value="no">No</option>
+#             </select>
+#           </td>
+#           <td><button>-</button></td>
+#         </tr>
+#       </tbody>
+#     </table>
+
+
+#     <!-- Add buttons for adding and removing rows for the vehicle table -->
+#     <button type="button" onclick="addRow('vehicleTable')">+</button>
+#     <!-- <button type="button" onclick="removeRow('vehicleTable')">-</button> -->
+
+#     <!-- ... (existing code) ... -->
+
+#     <h3 id="section3Heading">Details of Pet Animals</h3>
+#     <!-- Pet table -->
+#     <table id="petTable">
+#       <thead>
+#         <tr>
+#           <th>Sr. No</th>
+#           <th>Name of Pet Animal</th>
+#           <th>Registered</th>
+#           <th>License/Registration No.</th>
+#           <th>action</th>
+
+#         </tr>
+#       </thead>
+#       <tbody>
+#         <!-- Example row -->
+#         <tr>
+#           <td>1</td>
+#           <td><input type="text"></td>
+#           <td>
+#             <select>
+#               <option value="yes">Yes</option>
+#               <option value="no">No</option>
+#             </select>
+#           </td>
+#           <td><input type="text"></td>
+#           <td><button>-</td>
+
+#         </tr>
+#       </tbody>
+#     </table>
+
+#     <!-- Add buttons for adding and removing rows for the pet table -->
+#     <button type="button" onclick="addRow('petTable')">+</button>
+#     <!-- <button type="button" onclick="removeRow('petTable')">-</button> -->
+#     <!-- ... (existing code) ... -->
+
+#     <h3 id="section4Heading">Details of Servants/house maid/gardener if any:-</h3>
+#     <!-- Servant Quarters table -->
+#     <table id="servantQuartersTable">
+#       <thead>
+#         <tr>
+#           <th>Sr. No</th>
+#           <th>Name of house maid, Gardener and servant (Occupants of servant quarters)</th>
+#           <th>Permanent Address of Servant</th>
+#           <th>Police Verification Done</th>
+#           <th>Contact No.</th>
+#           <th>action</th>
+#         </tr>
+#       </thead>
+#       <tbody>
+#         <!-- Example row -->
+#         <tr>
+#           <td>1</td> <!--Sr. No-->
+#           <td><input type="text"></td>
+#           <td><input type="text"></td>
+#           <td>
+#             <select>
+#               <option value="yes">Yes</option>
+#               <option value="no">No</option>
+#             </select>
+#           </td>
+#           <td><input type="text" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57"></td>
+#           <td><button>-</td>
+
+#         </tr>
+#       </tbody>
+#     </table>
+
+#     <!-- Add buttons for adding and removing rows for the Servant Quarters table -->
+#     <button type="button" onclick="addRow('servantQuartersTable')">+</button>
+#     <!-- <button type="button" onclick="removeRow('servantQuartersTable')">-</button> -->
+
+
+#     <div style="margin-top: 40px; margin-left: -350px;">
+#       <input type="button" value="Submit" onclick="storeData()" style="font-size: 13px; padding: 10px;">
+#     </div>
+#   </form>
+# </body>
+
+# </html>
